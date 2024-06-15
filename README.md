@@ -21,6 +21,10 @@
 -  Hapus Post
 -  Logout
 
+## Roles:
+- Admin
+- Pengelola
+  
 # Preview Tampilan Website:
    ## Login
   

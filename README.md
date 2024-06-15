@@ -85,7 +85,7 @@
 
 ## Post Berita (Admin)
 
-<p> Admin dapat melihat semua data post dari pengelola 1 dan pengelola 2. </p>
+<p> Admin dapat melihat, mengedit, dan menghapus semua data post dari pengelola 1 dan pengelola 2. </p>
   
   <img src="tampilan_berita/admin.jpeg" />
 

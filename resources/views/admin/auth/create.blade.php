@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-    <title>Create User |</title>
+    <title>Create User</title>
     <link rel="shortcut icon" href="">
     <!-- General CSS Files -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -106,11 +106,15 @@
                                 <div class="form-group">
                                     <label for="role">Role</label>
                                     <select name="role" id="role" class="form-control">
-                                        <option disabled @if (!old('role')) selected @endif>Select Role</option>
-                                        @foreach ($roles as $role)
-                                            <option value="{{ $role->name }}" @if (old('role') === $role->name) selected @endif @if ($role->name === 'superadmin') disabled @endif>{{ $role->name }}</option>
-                                        @endforeach
-                                    </select>
+                                            <option disabled @if (!old('role')) selected @endif>Select Role</option>
+                                            @foreach ($roles as $role)
+                                                @if ($role->name == 'admin' || $role->name == 'writer')
+                                                    <option value="{{ $role->name }}" @if (old('role') === $role->name) selected @endif>
+                                                        {{ $role->name == 'writer' ? 'Pengelola' : ucfirst($role->name) }}
+                                                    </option>
+                                                @endif
+                                            @endforeach
+                                        </select>
                                 </div>
                             </div>
                         </div>

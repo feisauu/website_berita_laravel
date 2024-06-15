@@ -9,7 +9,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="col-xxl-5 col-xl-6 col-lg-6" style="visibility: hidden;">
+                    <div class="col-xxl-5 col-xl-6 col-lg-6">
                         <div class="tp-main-menu tp-menu-black tp-bs-menu tp-bp-menu text-center">
                             <nav id="mobile-menu">
                                 <ul>
@@ -17,13 +17,13 @@
                                             href="">Beranda</a>
                                     </li>
                                     <li class="{{ $menu == 'About' ? 'active' : '' }}"><a
-                                            href="">profil</a>
+                                            href="">Profil</a>
                                     </li>
                                     <li class=""><a
                                             href="">Layanan</a>
                                     </li>
                                     <li class="{{ $menu == 'Article' ? 'active' : '' }}"><a
-                                            href="">informasi</a>
+                                            href="">Informasi</a>
                                     </li>
                                     <li class="{{ $menu == 'Contact' ? 'active' : '' }}"><a
                                             href="">Kontak</a></li>
@@ -34,10 +34,10 @@
                     
                     <div class="col-xxl-4 col-xl-3 col-lg-3">
                         <div class="tp-header-left d-flex align-items-center justify-content-end ">
-                            <ul class="d-none ">
+                            <ul>
                                 <li class="corporate-social__scroll smooth wow tpfadeRight text-md-end text-center"><a
                                         class="" href="#corporate-about"><i class="far fa-arrow-down"
-                                            data-wow-duration=".9s" data-wow-delay=".7s"></i> down</a>
+                                            data-wow-duration=".9s" data-wow-delay=".7s"></i></a>
                                 </li>
                             </ul>
 

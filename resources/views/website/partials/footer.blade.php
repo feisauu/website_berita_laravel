@@ -11,7 +11,7 @@
                 <div class="col-xl-12 wow tpfadeUp" data-wow-duration=".3s" data-wow-delay=".5s">
                     <div class="footer-widget-info bp-footer-widget-color text-center">
                         <a class="tp-btn-white mb-50" href="{{ route('auth.login') }}">Log In</a>
-                        <p class="right-receved">© 2024 - Fei, All Right Receved.</p>
+                        <p class="right-receved">© 2024 - Feis Aulia F.</p>
                     </div>
                 </div>
             </div>

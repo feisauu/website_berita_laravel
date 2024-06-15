@@ -25,7 +25,7 @@ class PermissionsSeeder extends Seeder
         DB::table('model_has_permissions')->truncate();
         DB::table('role_has_permissions')->truncate();
 
-        $roles = ['superadmin', 'admin', 'writer', 'user'];
+        $roles = ['admin', 'writer'];
 
         foreach ($roles as $role) {
             Role::create(['name' => $role]);
@@ -34,6 +34,17 @@ class PermissionsSeeder extends Seeder
         $adminAccessPermission = Permission::create(['name' => 'admin access']);
         $adminRole = Role::whereName('admin')->first();
         $adminRole->givePermissionTo($adminAccessPermission);
+        $adminAccessPermissions = [
+            'blog categories read',
+            'blog categories create',
+            'blog categories update',
+            'blog categories delete',
+            'blog posts read',
+            'blog posts create',
+            'blog posts update',
+            'blog posts delete',
+        ];
+        
 
         $writerRole = Role::whereName('writer')->first();
         $writerPermissions = [
@@ -50,6 +61,7 @@ class PermissionsSeeder extends Seeder
         foreach ($writerPermissions as $name) {
             $permission = Permission::create(['name' => $name]);
             $writerRole->givePermissionTo($permission);
+            $adminRole->givePermissionTo($permission); // Add writer permissions to admin role
         }
 
         $writerRole->givePermissionTo($adminAccessPermission);

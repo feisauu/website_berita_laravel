@@ -36,7 +36,7 @@
                         <div class="postbox__wrapper">
                             <article class="postbox__item format-image transition-3">
                                 <div class="postbox__content">
-                                    <p><img class="w-100" style="border-radius: 25px" src="{{ asset($model->image->lg) }}" alt="{{ $model->title }}"
+                                    <p><img class="w-100" style="border-radius: 10px" src="{{ asset($model->image->lg) }}" alt="{{ $model->title }}"
                                             title="{{ $model->title }}"></p>
                                     <div class="postbox__meta">
                                         <span>
@@ -87,12 +87,12 @@
                     <div class="col-xxl-4 col-xl-4 col-lg-4">
                         <div class="sidebar__wrapper">
                             <div class="sidebar__widget mb-40">
-                                <h3 class="sidebar__widget-title">Search Here</h3>
+                                <h3 class="sidebar__widget-title">Cari Disini</h3>
                                 <div class="sidebar__widget-content">
                                     <div class="sidebar__search">
                                         <form action="{{ route('article.search') }}" method="get">
                                             <div class="sidebar__search-input-2">
-                                                <input type="search" name="slug" placeholder="Search ...">
+                                                <input type="search" name="slug" placeholder="Cari ...">
                                                 <button type="submit"><i class="far fa-search"></i></button>
                                             </div>
                                         </form>
@@ -100,7 +100,7 @@
                                 </div>
                             </div>
                             <div class="sidebar__widget mb-40">
-                                <h3 class="sidebar__widget-title">Categories</h3>
+                                <h3 class="sidebar__widget-title">Kategori Berita</h3>
                                 <div class="sidebar__widget-content">
                                     <ul>
                                         @foreach ($categoryArticles as $categoryArticle)
@@ -111,7 +111,7 @@
                                 </div>
                             </div>
                             <div class="sidebar__widget mb-40">
-                                <h3 class="sidebar__widget-title">Recent Post</h3>
+                                <h3 class="sidebar__widget-title">Berita Terbaru</h3>
                                 <div class="sidebar__widget-content">
                                     <div class="sidebar__post rc__post">
                                         @foreach ($recentPosts as $recentPost)

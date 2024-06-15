@@ -113,12 +113,21 @@
                                             style="position: absolute; transform: translate3d(0px, 34px, 0px); top: 0px; left: 0px; will-change: transform;">
                                             <a class="dropdown-item"
                                                 href="{{ route('admin.blog.posts.edit', $model->id) }}">Edit</a>
-                                            <form action="{{ route('admin.blog.posts.destroy', $model->id) }}"
-                                                method="post">
-                                                {{ csrf_field() }}
-                                                {{ method_field('delete') }}
-                                                <button class="dropdown-item">Delete</button>
-                                            </form>
+                                                <form id="delete-form" action="{{ route('admin.blog.posts.destroy', $model->id) }}" method="post" onsubmit="return confirmDeletion(event)">
+                                                    {{ csrf_field() }}
+                                                    {{ method_field('delete') }}
+                                                    <button type="submit" class="dropdown-item">Delete</button>
+                                                </form>
+
+                                                <script>
+                                                    function confirmDeletion(event) {
+                                                        if (!confirm("Apakah Anda yakin ingin menghapus item ini?")) {
+                                                            event.preventDefault();
+                                                            return false;
+                                                        }
+                                                        return true;
+                                                    }
+                                                </script>
                                         </div>
                                     </div>
                                     <!-- /btn-group-->

@@ -1,5 +1,6 @@
 @extends('website.layout')
 
+
 @section('title')
     @if (!empty($kategori->name))
         {{ $kategori->name }}
@@ -47,7 +48,7 @@
                                         </div>
                                         <div class="post__button">
                                             <a class="tp-btn-white" href="{{ route('article.show', $result->slug) }}">
-                                                READ MORE</a>
+                                                Baca Selengkapnya</a>
                                         </div>
                                     </div>
                                 </article>
@@ -99,12 +100,12 @@
                     <div class="col-xxl-4 col-xl-4 col-lg-4">
                         <div class="sidebar__wrapper">
                             <div class="sidebar__widget mb-40">
-                                <h3 class="sidebar__widget-title">Search Here</h3>
+                                <h3 class="sidebar__widget-title">Cari Disini</h3>
                                 <div class="sidebar__widget-content">
                                     <div class="sidebar__search">
                                         <form action="{{ route('article.search') }}" method="GET">
                                             <div class="sidebar__search-input-2">
-                                                <input type="search" name="cari" placeholder="Search ...">
+                                                <input type="search" name="cari" placeholder="Cari ...">
                                                 <button type="submit"><i class="far fa-search"></i></button>
                                             </div>
                                         </form>
@@ -112,7 +113,7 @@
                                 </div>
                             </div>
                             <div class="sidebar__widget mb-40">
-                                <h3 class="sidebar__widget-title">Categories</h3>
+                                <h3 class="sidebar__widget-title">Kategori Berita</h3>
                                 <div class="sidebar__widget-content">
                                     <ul>
                                         @foreach ($categoryArticles as $categoryArticle)
@@ -129,7 +130,7 @@
                                 </div>
                             </div>
                             <div class="sidebar__widget mb-40">
-                                <h3 class="sidebar__widget-title">Recent Post</h3>
+                                <h3 class="sidebar__widget-title">Berita Terbaru</h3>
                                 <div class="sidebar__widget-content">
                                     <div class="sidebar__post rc__post">
                                         @foreach ($recentPosts as $recentPost)
